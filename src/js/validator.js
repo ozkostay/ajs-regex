@@ -1,13 +1,9 @@
 export default class Validator {
-  constructor (name,regx) {
+  constructor(name) {
     this.name = name;
-    this.regx = regx;
   }
 
   validateUsername() {
-    // console.log('Yohohoh!!!', this.name);
-    
-    //const regx = /[a-zA-Z]\w/;
-    return this.regx.test(this.name);
+    return /^[a-zA-Z]{1}[\d]{0,3}[a-zA-Z\-_]*[a-zA-Z]{1}$/.test(this.name);
   }
 }
